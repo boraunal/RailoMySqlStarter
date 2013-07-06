@@ -51,7 +51,7 @@
 				<key>ActionParameters</key>
 				<dict>
 					<key>source</key>
-					<string>on run {input, parameters}	tell application "Terminal"		activate		do script with command "sudo /Volumes/MyResources/developerRoot/tomcat/bin/startup.command"		do script with command "sudo /usr/local/mysql/bin/mysqld_safe" in window 1	end tell	delay 10	tell application "System Events"		if exists process "org.apache.catalina.startup.Bootstrap" then			tell application "Terminal"				do script with command "Railo Started Succesifully" in window 1				set background color of window 1 to {0, 0, 45000, 50000}			end tell		else			display dialog "Railo Failed to Start"		end if	end tell	return inputend run</string>
+					<string>on run {input, parameters}	tell application "Terminal"		activate		do script with command "sudo /Volumes/MyResources/developerRoot/tomcat/bin/startup.command" (*Put startpup.command to your tomcat/bin folder*)		do script with command "sudo /usr/local/mysql/bin/mysqld_safe" in window 1 (*Change this path according to your mysql installation*)	end tell	delay 10	tell application "System Events"		if exists process "org.apache.catalina.startup.Bootstrap" then			tell application "Terminal"				do script with command "Railo Started Succesifully" in window 1				set background color of window 1 to {0, 0, 45000, 50000}			end tell		else			display dialog "Railo Failed to Start"		end if	end tell	return inputend run</string>
 				</dict>
 				<key>BundleIdentifier</key>
 				<string>com.apple.Automator.RunScript</string>

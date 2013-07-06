@@ -51,7 +51,7 @@
 				<key>ActionParameters</key>
 				<dict>
 					<key>source</key>
-					<string>on run {input, parameters}	tell application "Terminal"		activate		do script with command "sudo bash /Volumes/MyResources/developerRoot/tomcat/bin/shutdown.sh"		do script with command "sudo /usr/local/mysql/bin/mysqladmin shutdown" in window 1	end tell	return inputend run</string>
+					<string>on run {input, parameters}	tell application "Terminal"		activate		do script with command "sudo bash /Volumes/MyResources/developerRoot/tomcat/bin/shutdown.sh" (*Change this path according to your Railo installation*)		do script with command "sudo /usr/local/mysql/bin/mysqladmin shutdown" (*Change this path according to your mysql installation*)	end tell	return inputend run</string>
 				</dict>
 				<key>BundleIdentifier</key>
 				<string>com.apple.Automator.RunScript</string>
